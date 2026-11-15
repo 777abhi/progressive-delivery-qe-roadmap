@@ -1,0 +1,36 @@
+{
+  "name": "progressive-delivery-qe-roadmap",
+  "version": "1.0.0",
+  "description": "7-Day Shift-Right QE, Feature Flags, Canary Releases & Progressive Delivery Reference Lab",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:day1": "vitest run tests/day1-flag-evaluator.spec.ts",
+    "test:day2": "vitest run tests/day2-pairwise-matrix.spec.ts",
+    "test:day3": "vitest run tests/day3-shadow-diff.spec.ts",
+    "test:day4": "vitest run tests/day4-canary-analyzer.spec.ts",
+    "test:day5": "vitest run tests/day5-kill-switch.spec.ts",
+    "test:day6": "vitest run tests/day6-flag-lifecycle.spec.ts",
+    "test:day7": "vitest run tests/day7-progressive-gate.spec.ts",
+    "gate": "node dist/src/releaseGate/cli.js"
+  },
+  "keywords": [
+    "progressive-delivery",
+    "feature-flags",
+    "canary-releases",
+    "shift-right-qe",
+    "dark-launch",
+    "quality-engineering",
+    "vitest"
+  ],
+  "author": "777abhi",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
